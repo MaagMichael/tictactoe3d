@@ -1,3 +1,11 @@
+// you have a game like tictactoe, but the 2 players have each 9 tokens
+//  in 3 different sizes. 3 of size 1, 3 of size 2 and 3 of size 3. player 1 
+//  has the color orange, player 2 the color 2. the token can be placed by 
+//  the player in every cell of the nine fields, if the cell is empty or the
+//   value of the token is higher than the token already in the cell. winner 
+//   is the player who has 3 token of his color in horizontal, vertical or 
+//   diagonal. design this game and its logic.
+
 import { useState, useEffect } from "react";
 import "./App.css";
 
@@ -133,7 +141,10 @@ function App() {
             {Object.entries(tokens).map(([size, count]) => (
               <div className="token-left">
                 <span key={size}>Size {size}: </span>
-                <span key={count}>{" __ "}{count} left</span>
+                <span key={count}>
+                  {" __ "}
+                  {count} left
+                </span>
 
                 {Array(count)
                   .fill()
@@ -147,7 +158,6 @@ function App() {
                       O
                     </p>
                   ))}
-
               </div>
             ))}
           </div>
