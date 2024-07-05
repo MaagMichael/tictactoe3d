@@ -1,0 +1,61 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #333;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.token {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.token:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.size-1 { font-size: 12px; }
+.size-2 { font-size: 16px; }
+.size-3 { font-size: 20px; }
+
+.info, .token-counts {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.player-tokens {
+  /* margin: 5px 0; */
+}
+.token-left {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.token-left p {
+  margin: 0 1rem 
+}
